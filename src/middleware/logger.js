@@ -1,10 +1,10 @@
 const logger = (store) => (next) => (action)=>{
     console.group(action.type)
-     console.log('The state: ', action)
-     const returnState = next(action);
-     console.log('The new state: ', returnState)
+      console.log('The action: ', action)
+      const returnValue = next(action);
+      console.log('The new state: ', store.getState())
     console.groupEnd()
-    return returnState;
+    return returnValue;
 }
 
 export default logger;

@@ -5,9 +5,9 @@ export default function users( state = {}, action ){
         case RECEIVE_USERS:
             return {
                 ...state,
-                ...action.tweets
+                ...action.users
             }
         default: 
-        return state;
+          return state;
     }
 }
